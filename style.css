@@ -1,22 +1,58 @@
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f0f0f0;
 }
 
-header {
+#button{
+  cursor: pointer;
+  transition: .3s ease-in-out;
+}
+
+#button:hover{
+  transform: translateY(-10px);
+  box-shadow: 0px 10px 10px black;
+}
+
+#text{
+  text-align: center;
+}
+
+.load {
+  display: block;
+  position: absolute;
+  animation: loading 4s ease-in forwards;
+  background-color: #f0f0f0;
+  z-index: 1000;
+  height: 100vh;
+  width: 100vw;
+}
+
+@keyframes loading {
+  from{
+    display: block;
+    /* filter:opacity(1) */
+  }
+  to{
+    display: none;
+    filter:opacity(0)
+  }
+}
+.title {
   background-color: #333;
   color: #fff;
   padding: 1rem;
 }
 
-header h1 {
+.title h1 {
   margin: 0;
   font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
 
-header p {
+.title p {
   margin: 0;
   font-size: 0.8rem;
   display: flex;
@@ -24,19 +60,13 @@ header p {
   text-align: center;
 }
 
-header a {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-}
-
-nav {
+.main-bar {
   background-color: #555;
   padding: 1rem;
   position: relative;
 }
 
-nav ul {
+.main-bar ul {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -45,14 +75,19 @@ nav ul {
   text-align: center;
 }
 
-nav ul li {
+.main-bar ul li {
   margin-right: 1rem;
   
 }
 
-nav a {
+.main-bar a {
   color: #fff;
   text-decoration: none;
+}
+
+.main-bar a:hover, .main-bar a:active {
+  background-color: #972c2cad;
+  padding: 0.7rem;
 }
 
 .logo-container {
